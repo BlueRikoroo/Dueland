@@ -19,6 +19,7 @@
     </sprites>
     <sprite>sprites\NPC</sprite>
     <sprites name="Player_Movements">
+      <sprite>sprites\spr_player_hitbox</sprite>
       <sprite>sprites\spr_player_stand</sprite>
       <sprite>sprites\spr_man_walk</sprite>
       <sprite>sprites\spr_man_sprint</sprite>
@@ -35,6 +36,7 @@
   <objects name="objects">
     <object>objects\GMS</object>
     <objects name="obj_blocks">
+      <object>objects\par_blocks</object>
       <object>objects\obj_dirt</object>
       <object>objects\obj_stone</object>
       <object>objects\obj_grass_dirt</object>

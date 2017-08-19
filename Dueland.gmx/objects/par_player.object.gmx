@@ -38,7 +38,7 @@ vspd = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_bedrock">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,20 +55,21 @@ vspd = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dist,dir,xdir,ydir;
-dist=point_distance(x,y,xprevious,yprevious);
-dir=degtorad(point_direction(xprevious,yprevious,x,y));
-xdir=cos(dir);
-ydir=-sin(dir);
-x=xprevious;
-y=yprevious;
-repeat dist{
-if place_meeting(x+xdir,y,other.object_index)
-hspeed=0; else
-x+=xdir;
-if place_meeting(x,y+ydir,other.object_index)
-vspeed=0; else
-y+=ydir;
+            <string>///Collisions
+//Horizontal Collision
+if (place_meeting(x+hspeed,y,par_blocks)){
+    while(!place_meeting(x+sign(hspeed),y,par_blocks)){
+        x += sign(hspeed);
+    }
+    hspeed = 0;
+}
+
+//Vertical Collision
+if (place_meeting(x,y+vspeed,par_blocks)){
+    while(!place_meeting(x,y+sign(vspeed),par_blocks)){
+        y += sign(vspeed);
+    }
+    vspeed = 0;
 }
 </string>
           </argument>
