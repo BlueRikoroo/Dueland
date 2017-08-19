@@ -5,10 +5,10 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>par_player</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,87 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Player Movements
-var rkey = keyboard_check(ord("D"));
-var lkey = keyboard_check(ord("A"));
-var jkey = keyboard_check(vk_space);
+            <string>/// Initialize variables
+grav = 1;
+spd = 6;
+jspd = 12;
+hspd = 0;
+vspd = 0;
 
-//Check for ground
-if place_meeting(x, y+1, obj_stone) {
-   vspd = 0;
-   
-   // Jumping
-   if (jkey) {
-       vspd = -jspd;
-   }
-} else {
-    // Gravity
-    if (vspd &lt; 10) {
-        vspd += grav;
-    }
-}
 
-// Moving right
-if (rkey) {
-    hspd = spd; 
-}
-
-// Moving left
-if (lkey) {
-    hspd = -spd; 
-}
-
-// Check for not moving
-if ((!rkey &amp;&amp; !lkey) || (rkey &amp;&amp; lkey)) {
-    hspd = 0;
-}
-
-// Horizontal collisions
-if (place_meeting(x+hspd, y, obj_stone)) {
-    while (!place_meeting(x+sign(hspd), y, obj_stone)) {
-        x += sign(hspd);
-    }
-    hspd = 0;
-}
-
-// Move horizontally
-x += hspd;
-
-// Vertical collisions
-if (place_meeting(x, y+vspd, obj_stone)) {
-    while (!place_meeting(x, y+sign(vspd), obj_stone)) {
-        y += sign(vspd)
-    }
-    vspd = 0;
-}
-
-// Move vertically
-y += vspd;
-
-//Control the sprites
-if (yprevious != y) {
-    sprite_index = spr_player_jump;
-    image_speed = 0;
-    image_index = y&gt;yprevious;
-} else {
-    if (xprevious != x) {
-        sprite_index = spr_man_walk;
-        image_speed = .3;
-    } else {
-        sprite_index = spr_player_stand;
-    }
-}
-
-//Control player's facing direction
-if (xprevious &lt; x) {
-    image_xscale = 1;
-} else if (xprevious &gt; x) {
-    image_xscale = -1;
-}
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="4" ename="obj_bedrock">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -122,17 +55,20 @@ if (xprevious &lt; x) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///
-if gms_info_isloggedin(){
-    gms_self_set("sprite_index",sprite_index)
-    gms_self_set("image_speed",image_speed)
-    gms_self_set("image_index",image_index)
-    /*
-    gms_self_set("animation",animation[0])
-    gms_self_set("animation1",animation[1])
-    gms_self_set("animation2",animation[2])
-    gms_self_set("animation3",animation[3])
-    gms_self_set("animation4",animation[4])*/
+            <string>var dist,dir,xdir,ydir;
+dist=point_distance(x,y,xprevious,yprevious);
+dir=degtorad(point_direction(xprevious,yprevious,x,y));
+xdir=cos(dir);
+ydir=-sin(dir);
+x=xprevious;
+y=yprevious;
+repeat dist{
+if place_meeting(x+xdir,y,other.object_index)
+hspeed=0; else
+x+=xdir;
+if place_meeting(x,y+ydir,other.object_index)
+vspeed=0; else
+y+=ydir;
 }
 </string>
           </argument>

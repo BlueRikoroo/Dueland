@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\GameMaker Server+(Windows)</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Blocks">
@@ -27,7 +29,11 @@
     <background>background\sky</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\login_callback.gml</script>
+  </scripts>
   <objects name="objects">
+    <object>objects\GMS</object>
     <objects name="obj_blocks">
       <object>objects\obj_dirt</object>
       <object>objects\obj_stone</object>
@@ -38,10 +44,13 @@
       <object>objects\obj_bedrock</object>
     </objects>
     <object>objects\obj_npc</object>
+    <object>objects\par_player</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_other_player</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\World</room>
+    <room>rooms\room_init</room>
+    <room>rooms\room_world</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

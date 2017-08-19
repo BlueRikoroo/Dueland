@@ -15,20 +15,20 @@
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
-    <isSet>0</isSet>
-    <w>0</w>
-    <h>0</h>
-    <showGrid>0</showGrid>
-    <showObjects>0</showObjects>
-    <showTiles>0</showTiles>
-    <showBackgrounds>0</showBackgrounds>
-    <showForegrounds>0</showForegrounds>
+    <isSet>-1</isSet>
+    <w>1024</w>
+    <h>600</h>
+    <showGrid>-1</showGrid>
+    <showObjects>-1</showObjects>
+    <showTiles>-1</showTiles>
+    <showBackgrounds>-1</showBackgrounds>
+    <showForegrounds>-1</showForegrounds>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
-    <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
+    <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>0</xoffset>
-    <yoffset>0</yoffset>
+    <xoffset>278</xoffset>
+    <yoffset>361</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="sky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_player" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="320" vborder="320" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="par_player" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="320" vborder="320" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -92,7 +92,6 @@
     <instance objName="obj_dirt" x="192" y="672" name="inst_DF1EE2B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="224" y="672" name="inst_1357ACF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="288" y="672" name="inst_BBC7B685" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="512" y="576" name="inst_34BD280F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="1984" y="704" name="inst_69989EEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="1952" y="704" name="inst_4359B4BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="1920" y="704" name="inst_871042E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -802,6 +801,7 @@
     <instance objName="obj_bedrock" x="4000" y="736" name="inst_55C096DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="2304" y="608" name="inst_DB671585" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="2336" y="608" name="inst_1AD44D35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="480" y="576" name="inst_1ADCEABC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
