@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_stone</parentName>
+  <parentName>par_blocks</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0;
+            <string>///Defaults
+event_inherited()
+
+image_index = 0;
 image_speed = 0;
 </string>
           </argument>

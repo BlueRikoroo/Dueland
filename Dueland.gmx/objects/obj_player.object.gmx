@@ -31,7 +31,7 @@ var lkey = keyboard_check(ord("A"));
 var jkey = keyboard_check(vk_space);
 
 //Check for ground
-if place_meeting(x, y+1, obj_stone) {
+if place_meeting(x, y+1, par_blocks) {
    // Jumping
    if (jkey) {
        vspeed = -jspd;

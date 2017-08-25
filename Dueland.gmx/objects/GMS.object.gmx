@@ -112,6 +112,11 @@ global.key_lshift = keyboard_check(vk_lshift);
             <kind>1</kind>
             <string>///Login Screen
 if keyboard_check_pressed(ord('I')){
+    //Pull up login screen
+    gms_show_login()
+    
+    //Random Username (no Login)
+    /*
     if username = ""{
         while(username = "" or gms_login_player_has_account(username)){
             username = ""
@@ -122,6 +127,7 @@ if keyboard_check_pressed(ord('I')){
     }
     gms_login_set_username(username)
     gms_login_execute(login_callback)
+    */
 }
 </string>
           </argument>
