@@ -42,6 +42,8 @@ randomize();
 gms_chat_bind_view(0,0,200)
 gms_show_login()
 username = ""
+
+gms_show_login()
 </string>
           </argument>
         </arguments>
@@ -91,9 +93,9 @@ global.key_lshift = keyboard_check(vk_lshift);
           <argument>
             <kind>1</kind>
             <string>///Login Screen
-if keyboard_check_pressed(ord('I')){
+//if keyboard_check_pressed(ord('I')){
     //Pull up login screen
-    gms_show_login()
+    //gms_show_login()
     
     //Random Username (no Login)
     /*
@@ -108,7 +110,7 @@ if keyboard_check_pressed(ord('I')){
     gms_login_set_username(username)
     gms_login_execute(login_callback)
     */
-}
+//}
 </string>
           </argument>
         </arguments>
