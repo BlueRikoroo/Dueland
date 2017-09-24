@@ -31,6 +31,7 @@
       <sprite>sprites\spr_healthbar</sprite>
     </sprites>
     <sprite>sprites\items</sprite>
+    <sprite>sprites\spr_32x32_circle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\sky</background>
@@ -39,6 +40,7 @@
   <scripts name="scripts">
     <script>scripts\login_callback.gml</script>
     <script>scripts\scr_itempickup.gml</script>
+    <script>scripts\update_scoreboard_var.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\GMS</object>
@@ -58,6 +60,10 @@
     <object>objects\obj_other_player</object>
     <object>objects\obj_inventory</object>
     <object>objects\obj_invbutton</object>
+    <object>objects\obj_scoreboard</object>
+    <object>objects\obj_damage_transfer</object>
+    <object>objects\obj_room_handler</object>
+    <object>objects\obj_update_score</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_init</room>
