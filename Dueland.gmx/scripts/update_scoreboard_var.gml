@@ -1,10 +1,24 @@
 #define update_scoreboard_var
 ///update_scoreboard_var(name,scorerelative)
+var s = false //successful
 if instance_exists(obj_scoreboard){
-    for(var i = 0;i<array_length_1d(names);i++){
-        if name[0] = argument0{
-            Score[0] += argument1
-            break;   
+    with(obj_scoreboard){
+        for(var i = 0;i<array_length_1d(names);i++){
+            if names[i] = argument0{
+                Score[i] += argument1
+                s = true
+                break;   
+            }
+        }
+        var i = 0
+        while !s{
+            if i = array_length_1d(names) or names[i] = ""{
+                names[i] = argument0
+                Score[i] = argument1
+                s = true
+                break;   
+            }
+            i++
         }
     }
 }else{

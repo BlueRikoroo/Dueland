@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Online Recieve
+            <string>///Online Recieve Image
 sprite_index = gms_other_get(player_id,"sprite_index") 
 image_speed = gms_other_get(player_id,"image_speed")
 image_index = gms_other_get(player_id,"image_index")
@@ -50,7 +50,8 @@ image_index = gms_other_get(player_id,"image_index")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hitpoints = gms_other_get(id,"Health")
+            <string>///Online Recieve Health
+hitpoints = gms_other_get(id,"Health")
 </string>
           </argument>
         </arguments>
