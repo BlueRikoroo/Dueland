@@ -285,11 +285,7 @@ if hitpoints &lt;= 0{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_other_player){
-    with(collision_point(mouse_x,mouse_y,obj_other_player,0,0)){
-        hitpoints -= 10;
-    }
-}
+            <string>instance_create(mouse_x, mouse_y, obj_damage_transfer)
 </string>
           </argument>
         </arguments>
