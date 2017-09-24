@@ -25,6 +25,12 @@
       <sprite>sprites\spr_man_sprint</sprite>
       <sprite>sprites\spr_player_jump</sprite>
     </sprites>
+    <sprites name="UI">
+      <sprite>sprites\spr_inv_slot</sprite>
+      <sprite>sprites\spr_healthbarback</sprite>
+      <sprite>sprites\spr_healthbar</sprite>
+    </sprites>
+    <sprite>sprites\items</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\sky</background>
@@ -32,6 +38,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\login_callback.gml</script>
+    <script>scripts\scr_itempickup.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\GMS</object>
@@ -49,6 +56,8 @@
     <object>objects\par_player</object>
     <object>objects\obj_player</object>
     <object>objects\obj_other_player</object>
+    <object>objects\obj_inventory</object>
+    <object>objects\obj_invbutton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_init</room>

@@ -28,6 +28,30 @@
             <string>///Create
 event_inherited()
 name = gms_self_name()
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>maxHitpoints = 100;
+hitpoints = maxHitpoints;
+
 </string>
           </argument>
         </arguments>
@@ -185,6 +209,56 @@ if mouse_check_button_pressed(mb_right){
     if !collision_point(tx,ty,par_blocks,0,0)
         instance_create(tx,ty,obj_stone)
 }
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>gms_self_set("Health", hitpoints) 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if instance_exists(obj_other_player){
+    with(collision_point(mouse_x,mouse_y,obj_other_player,0,0)){
+        hitpoints -= 10;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -210,7 +284,39 @@ if mouse_check_button_pressed(mb_right){
             <string>///Draw Name
 draw_set_valign(fa_middle)
 draw_set_halign(fa_center)
-draw_text(x,y-50,name)
+draw_set_colour(c_black)  
+if name = "Anikken"{
+    draw_set_colour(c_yellow)
+}
+if name = "georges"{
+    draw_set_colour(c_yellow)
+}
+if name = "Shaded"{
+    draw_set_colour(c_yellow)
+}
+if name = "Avatar"{
+    draw_set_colour(c_yellow)
+}
+if name = "Aaron13ps"{
+    draw_set_colour(c_yellow)
+}
+if name = "iPCGames"{
+    draw_set_colour(c_green)
+}
+if name = "Hinter"{
+    draw_set_colour(c_green)
+}
+if name = "Bpup"{
+    draw_set_colour(c_green)
+}
+if name = "BlackWight"{
+    draw_set_colour(c_green)
+}
+if name = "Growipod"{
+    draw_set_colour(c_green)
+}
+draw_text(x,y-40,name)
+
 </string>
           </argument>
         </arguments>
@@ -233,6 +339,30 @@ draw_text(x,y-50,name)
             <kind>1</kind>
             <string>///Draw Self
 draw_self()
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Healthbar display
+draw_sprite(spr_healthbarback,-1,x,y-55);
+draw_sprite_stretched(spr_healthbar,-1,x-24,y-59,hitpoints/maxHitpoints*48,8)
+
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,28 @@
 sprite_index = gms_other_get(player_id,"sprite_index") 
 image_speed = gms_other_get(player_id,"image_speed")
 image_index = gms_other_get(player_id,"image_index")
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hitpoints = gms_other_get(id,"Health")
 </string>
           </argument>
         </arguments>
@@ -76,7 +98,37 @@ draw_self()
             <string>///Draw Name
 draw_set_valign(fa_middle)
 draw_set_halign(fa_center)
-draw_text(x,y-50,name)
+if name = "Anikken"{
+    draw_set_colour(c_yellow)
+}
+if name = "georges"{
+    draw_set_colour(c_yellow)
+}
+if name = "Shaded"{
+    draw_set_colour(c_yellow)
+}
+if name = "Avatar"{
+    draw_set_colour(c_yellow)
+}
+if name = "Aaron13ps"{
+    draw_set_colour(c_yellow)
+}
+if name = "iPCGames"{
+    draw_set_colour(c_green)
+}
+if name = "Hinter"{
+    draw_set_colour(c_green)
+}
+if name = "Bpup"{
+    draw_set_colour(c_green)
+}
+if name = "Blackwight"{
+    draw_set_colour(c_green)
+}
+if name = "Growipod"{
+    draw_set_colour(c_green)
+}
+draw_text(x,y-40,name)
 </string>
           </argument>
         </arguments>
