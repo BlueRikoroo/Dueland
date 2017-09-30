@@ -311,7 +311,7 @@ if mouse_check_button_pressed(mb_left)
             <string>///Draw Name
 draw_set_valign(fa_middle)
 draw_set_halign(fa_center)
-draw_set_colour(c_black)  
+draw_set_colour(c_gray)  
 if name = "Anikken"{
     draw_set_colour(c_yellow)
 }
