@@ -53,6 +53,8 @@ name = gms_self_name()
 maxHitpoints = 100;
 hitpoints = maxHitpoints;
 lasthit = noone // The last player to hit you.
+
+Score = gms_ini_player_read("Score","Kills")
 </string>
           </argument>
         </arguments>
@@ -207,7 +209,7 @@ if gms_info_isloggedin(){
 if mouse_check_button_pressed(mb_right){
     var tx = floor(mouse_x/32)*32
     var ty = floor(mouse_y/32)*32
-    if !collision_point(tx,ty,par_blocks,0,0)
+    if !collision_point(tx,ty,par_blocks,0,0) and !collision_rectangle(tx,ty,tx+31,ty+31,par_player,0,0)
         instance_create(tx,ty,obj_stone)
 }
 
@@ -258,8 +260,9 @@ gms_self_set("Health", hitpoints)
 //if keyboard_check_pressed(ord('K'))
 //    hitpoints = 0
 if hitpoints &lt;= 0{
-    if is_string(lasthit)
-        update_scoreboard_var(lasthit,1)
+    if is_string(lasthit){
+        transfer_score(lasthit,1)
+    }
     instance_create(obj_room_handler.defaultX,obj_room_handler.defaultY,obj_player)
     instance_destroy()
 }
@@ -284,8 +287,16 @@ if hitpoints &lt;= 0{
           <argument>
             <kind>1</kind>
             <string>///Click to die
-if mouse_check_button_pressed(mb_left)
-    instance_create(mouse_x, mouse_y, obj_damage_transfer)
+if mouse_check_button_pressed(mb_left){
+    with(instance_create(mouse_x, mouse_y, obj_damage_transfer)){
+        cbs = false
+        if instance_exists(obj_player)
+            gms_instance_sync_var_add("name",obj_player.name);
+        else
+            gms_instance_sync_var_add("name","Error - No Entity");
+        gms_instance_sync(id,is_onetime)
+    }
+}
 </string>
           </argument>
         </arguments>

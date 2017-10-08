@@ -26,17 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>///Defaults
-breakable = true
-if !gms_instance_created_by_sync(){
-    alarm[0] = 10
-    gms_instance_sync(id,is_extended)
-}
+//This object transfers the relative score from one player to another
+
+name = ""
+relScore = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="4">
+    <event eventtype="7" enumb="22">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -53,9 +52,19 @@ if !gms_instance_created_by_sync(){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy
-if breakable
-    instance_destroy()
+            <string>///Sync
+name = ds_map_find_value(variable_map, "name");
+relScore = ds_map_find_value(variable_map, "relScore");
+if instance_exists(obj_player){
+    with(obj_player){
+        if other.name = name{
+            Score += other.relScore
+            gms_ini_player_write("Score","Kills",Score)
+            update_scoreboard(name,Score)
+            trasnfer_currentScore(name,Score)
+        }
+    }
+}
 </string>
           </argument>
         </arguments>

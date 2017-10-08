@@ -26,17 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>///Defaults
-breakable = true
-if !gms_instance_created_by_sync(){
-    alarm[0] = 10
-    gms_instance_sync(id,is_extended)
-}
+//This object updates a users score for all clients
+
+name = ""
+Score = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="4">
+    <event eventtype="7" enumb="22">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -53,9 +52,10 @@ if !gms_instance_created_by_sync(){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy
-if breakable
-    instance_destroy()
+            <string>///Sync
+name = ds_map_find_value(variable_map, "name");
+Score = ds_map_find_value(variable_map, "Score");
+update_scoreboard(name,Score)
 </string>
           </argument>
         </arguments>

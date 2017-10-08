@@ -27,15 +27,6 @@
             <kind>1</kind>
             <string>cbs = true //created by sync
 hit = false
-if !gms_instance_created_by_sync(){
-    if instance_exists(obj_player)
-        gms_instance_sync_var_add("name",obj_player.name);
-    else
-        gms_instance_sync_var_add("name","Error - No Entity");
-    gms_instance_sync(id,is_onetime)
-    cbs = false
-}
-
 </string>
           </argument>
         </arguments>
@@ -83,13 +74,15 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>///Sync
-if cbs and !hit
-    with(obj_player)
+if cbs and !hit{
+    with(obj_player){
         if place_meeting(x,y,other.id){
             hitpoints -= 10
             lasthit = ds_map_find_value(other.variable_map, "name");
             other.hit = true
         }
+    }
+}
 alarm[0] = 1
 
 </string>
