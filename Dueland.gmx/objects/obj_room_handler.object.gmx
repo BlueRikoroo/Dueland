@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Defaults
 //Default Spawn Location
-defaultX = 480
-defaultY = 576
+defaultX = 5984
+defaultY = 512
 </string>
           </argument>
         </arguments>

@@ -16,6 +16,8 @@
       <sprite>sprites\Stone</sprite>
       <sprite>sprites\Sand</sprite>
       <sprite>sprites\Cactus</sprite>
+      <sprite>sprites\Grass</sprite>
+      <sprite>sprites\Snowy_Dirt</sprite>
     </sprites>
     <sprite>sprites\NPC</sprite>
     <sprites name="Player_Movements">
@@ -30,6 +32,14 @@
       <sprite>sprites\spr_healthbarback</sprite>
       <sprite>sprites\spr_healthbar</sprite>
     </sprites>
+    <sprites name="Player_Wearables">
+      <sprite>sprites\colossal_sword</sprite>
+      <sprite>sprites\long_regular_sword</sprite>
+      <sprite>sprites\short_regular_sword</sprite>
+      <sprite>sprites\knight_chestplate</sprite>
+      <sprite>sprites\knight_leggings</sprite>
+      <sprite>sprites\knight_helmet</sprite>
+    </sprites>
     <sprite>sprites\items</sprite>
     <sprite>sprites\spr_32x32_circle</sprite>
   </sprites>
@@ -43,8 +53,7 @@
     <script>scripts\update_scoreboard.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\GMS</object>
-    <objects name="obj_blocks">
+    <objects name="Block Objects">
       <object>objects\par_blocks</object>
       <object>objects\obj_dirt</object>
       <object>objects\obj_stone</object>
@@ -53,11 +62,14 @@
       <object>objects\obj_sand</object>
       <object>objects\obj_cactus</object>
       <object>objects\obj_bedrock</object>
+      <object>objects\obj_grass</object>
+      <object>objects\obj_snowy_dirt</object>
     </objects>
-    <object>objects\obj_npc</object>
     <object>objects\par_player</object>
+    <object>objects\obj_npc</object>
     <object>objects\obj_player</object>
     <object>objects\obj_other_player</object>
+    <object>objects\GMS</object>
     <object>objects\obj_inventory</object>
     <object>objects\obj_invbutton</object>
     <object>objects\obj_scoreboard</object>
