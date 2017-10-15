@@ -322,6 +322,9 @@ if name = "BlackWight"{
 if name = "Growipod"{
     draw_set_colour(c_green)
 }
+if name = "Drew123"{
+    draw_set_color(c_yellow)
+}
 draw_text(x,y-40,name)
 
 </string>

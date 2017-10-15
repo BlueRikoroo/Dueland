@@ -42,6 +42,8 @@
     </sprites>
     <sprite>sprites\items</sprite>
     <sprite>sprites\spr_32x32_circle</sprite>
+    <sprite>sprites\Spr_logo</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\sky</background>
@@ -77,9 +79,15 @@
     <object>objects\obj_scoreboard_update</object>
     <object>objects\obj_damage_transfer</object>
     <object>objects\obj_room_handler</object>
+    <object>objects\obj_menu_master</object>
+    <objects name="buttons">
+      <object>objects\obj_play_button</object>
+      <object>objects\obj_quit_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_menu</room>
     <room>rooms\room_world</room>
   </rooms>
   <help>
