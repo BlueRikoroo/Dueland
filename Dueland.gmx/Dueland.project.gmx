@@ -80,6 +80,7 @@
     <object>objects\obj_damage_transfer</object>
     <object>objects\obj_room_handler</object>
     <object>objects\obj_menu_master</object>
+    <object>objects\obj_backtomenu</object>
     <objects name="buttons">
       <object>objects\obj_play_button</object>
       <object>objects\obj_quit_button</object>

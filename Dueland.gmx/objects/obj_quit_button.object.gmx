@@ -50,7 +50,7 @@
             <kind>1</kind>
             <string>draw_set_color(c_black)
 draw_self()
-draw_text(x-16,y-10, "Quit")
+draw_text(x-16,y+17.5, "Quit")
 </string>
           </argument>
         </arguments>

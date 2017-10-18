@@ -206,9 +206,11 @@ if gms_info_isloggedin()
           <argument>
             <kind>1</kind>
             <string>///Draw GUI
-
-gms_draw()
-
+if (room = room_menu){
+}
+else{
+    gms_draw()
+}
 </string>
           </argument>
         </arguments>
@@ -231,7 +233,11 @@ gms_draw()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gms_chat_draw()
+            <string>if(room = room_menu){
+}
+else{
+gms_chat_draw()
+}
 </string>
           </argument>
         </arguments>
