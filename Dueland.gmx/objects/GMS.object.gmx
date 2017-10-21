@@ -39,7 +39,7 @@ global.bgm = noone;
 
 randomize();
 
-gms_chat_bind_view(0,0,200)
+gms_chat_bind_view(0,0,250)
 gms_show_login()
 username = ""
 

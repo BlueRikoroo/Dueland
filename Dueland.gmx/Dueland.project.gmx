@@ -55,6 +55,11 @@
     <script>scripts\update_scoreboard.gml</script>
   </scripts>
   <objects name="objects">
+    <objects name="Player Stuff">
+      <object>objects\par_player</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_other_player</object>
+    </objects>
     <objects name="Block Objects">
       <object>objects\par_blocks</object>
       <object>objects\obj_dirt</object>
@@ -66,22 +71,26 @@
       <object>objects\obj_bedrock</object>
       <object>objects\obj_grass</object>
       <object>objects\obj_snowy_dirt</object>
+      <objects name="AI Stuff">
+        <object>objects\obj_npc</object>
+      </objects>
     </objects>
-    <object>objects\par_player</object>
-    <object>objects\obj_npc</object>
-    <object>objects\obj_player</object>
-    <object>objects\obj_other_player</object>
-    <object>objects\GMS</object>
-    <object>objects\obj_inventory</object>
-    <object>objects\obj_invbutton</object>
-    <object>objects\obj_scoreboard</object>
-    <object>objects\obj_score_update</object>
-    <object>objects\obj_scoreboard_update</object>
-    <object>objects\obj_damage_transfer</object>
-    <object>objects\obj_room_handler</object>
-    <object>objects\obj_menu_master</object>
-    <object>objects\obj_backtomenu</object>
-    <objects name="buttons">
+    <objects name="Inventory Stuff">
+      <object>objects\obj_inventory</object>
+      <object>objects\obj_invbutton</object>
+    </objects>
+    <objects name="Scoreboard Stuff">
+      <object>objects\obj_scoreboard</object>
+      <object>objects\obj_score_update</object>
+      <object>objects\obj_scoreboard_update</object>
+    </objects>
+    <objects name="Other Stuff">
+      <object>objects\GMS</object>
+      <object>objects\obj_room_handler</object>
+      <object>objects\obj_damage_transfer</object>
+      <object>objects\obj_menu_master</object>
+    </objects>
+    <objects name="Buttons">
       <object>objects\obj_play_button</object>
       <object>objects\obj_quit_button</object>
     </objects>
