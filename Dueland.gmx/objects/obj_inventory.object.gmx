@@ -74,7 +74,7 @@ if invDisplay = true and keyboard_check_pressed("i"){
     y1 = view_yview[0];
     y2 = y1 + 100;
     
-    draw_set_colour(c_silver);
+    draw_set_colour(c_dkgray);
     draw_set_alpha(0.8);
     draw_rectangle(x1,y1,x2,y2,0);
     draw_set_alpha(1);

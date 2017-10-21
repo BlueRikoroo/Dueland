@@ -210,7 +210,7 @@ if mouse_check_button_pressed(mb_right){
     var tx = floor(mouse_x/32)*32
     var ty = floor(mouse_y/32)*32
     if !collision_point(tx,ty,par_blocks,0,0) and !collision_rectangle(tx,ty,tx+31,ty+31,par_player,0,0)
-        instance_create(tx,ty,obj_stone)
+        instance_create(tx,ty,obj_brick_block)
 }
 
 

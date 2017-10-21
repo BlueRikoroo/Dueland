@@ -18,6 +18,7 @@
       <sprite>sprites\Cactus</sprite>
       <sprite>sprites\Grass</sprite>
       <sprite>sprites\Snowy_Dirt</sprite>
+      <sprite>sprites\Brick_Block</sprite>
     </sprites>
     <sprite>sprites\NPC</sprite>
     <sprites name="Player_Movements">
@@ -55,6 +56,9 @@
     <script>scripts\update_scoreboard.gml</script>
   </scripts>
   <objects name="objects">
+    <objects name="AI Stuff">
+      <object>objects\obj_npc</object>
+    </objects>
     <objects name="Player Stuff">
       <object>objects\par_player</object>
       <object>objects\obj_player</object>
@@ -71,9 +75,7 @@
       <object>objects\obj_bedrock</object>
       <object>objects\obj_grass</object>
       <object>objects\obj_snowy_dirt</object>
-      <objects name="AI Stuff">
-        <object>objects\obj_npc</object>
-      </objects>
+      <object>objects\obj_brick_block</object>
     </objects>
     <objects name="Inventory Stuff">
       <object>objects\obj_inventory</object>
