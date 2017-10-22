@@ -154,7 +154,7 @@ if (hspeed &gt; 0) {
 
 //Cactus Damage
 if place_meeting(x+hspeed, y+vspeed, obj_cactus){
-   hitpoints -= 1;
+   hitpoints -= 3;
                                                 }
 
 //Event Inherited

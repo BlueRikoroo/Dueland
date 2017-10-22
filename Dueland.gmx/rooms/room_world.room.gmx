@@ -278,7 +278,7 @@
     <instance objName="obj_grass_dirt" x="3968" y="640" name="inst_D9C30850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_dirt" x="3936" y="640" name="inst_9A671CB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_dirt" x="4000" y="672" name="inst_F7D6DE30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_npc" x="5771" y="462" name="inst_EF1998C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_npc" x="5792" y="503" name="inst_EF1998C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="2016" y="672" name="inst_6CFFDBD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="2016" y="704" name="inst_8CAC904B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="2048" y="704" name="inst_68B6820D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
