@@ -44,6 +44,16 @@ gms_show_login()
 username = ""
 
 gms_show_login()
+
+gms_other_admin_rights("Anikken")
+gms_other_admin_rights("georges")
+gms_other_admin_rights("Aaron13ps")
+gms_other_admin_rights("Drew")
+gms_other_admin_rights("Sieggy")
+gms_other_admin_rights("iPCGames")
+gms_other_admin_rights("Hinter")
+gms_other_admin_rights("Diamonds")
+gms_other_admin_rights("Growipod")
 </string>
           </argument>
         </arguments>
